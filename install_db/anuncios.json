@@ -1,0 +1,53 @@
+{
+  "anuncios": [
+    {
+      "nombre": "Bicicleta",
+      "venta": true,
+      "precio": 230.15,
+      "foto": "bici.jpg",
+      "tags": ["lifestyle", "motor"]
+    },
+    {
+      "nombre": "iPhone 6S",
+      "venta": true,
+      "precio": 645.15,
+      "foto": "iphone6s.jpg",
+      "tags": ["iphone", "movil", "apple"]
+    },
+    {
+      "nombre": "MacBook Air 2010",
+      "venta": true,
+      "precio": 445.00,
+      "foto": "mbair.jpg",
+      "tags": ["laptop", "portátil", "apple"]
+    },
+    {
+      "nombre": "Canon EOS 5D Mark III",
+      "venta": true,
+      "precio": 3200.00,
+      "foto": "eos5d.jpg",
+      "tags": ["fotografía", "cámara", "canon"]
+    },
+    {
+      "nombre": "Raqueta Tenis HEAD",
+      "venta": true,
+      "precio": 145.15,
+      "foto": "headtenis.jpg",
+      "tags": ["iphone", "movil", "apple"]
+    },
+    {
+      "nombre": "Colección Maqui Navaja (El Jueves)",
+      "venta": false,
+      "precio": 300.00,
+      "foto": "maquicover.jpg",
+      "tags": ["comic", "humor", "el jueves"]
+    },
+    {
+      "nombre": "iPhone 6S",
+      "venta": true,
+      "precio": 645.15,
+      "foto": "iphone6s.jpg",
+      "tags": ["iphone", "movil", "apple"]
+    }
+  ]
+}

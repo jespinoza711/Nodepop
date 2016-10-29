@@ -1,0 +1,14 @@
+{
+  "usuarios": [
+    {
+      "nombre": "thinway",
+      "email": "fran@thinway.org",
+      "clave": "pass1234"
+    },
+    {
+      "nombre": "smith",
+      "email": "smith@gmail.com",
+      "clave": "pass4321"
+    }
+  ]
+}
