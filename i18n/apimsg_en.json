@@ -1,0 +1,6 @@
+{
+  "failed_auth": "Failed to authenticate token",
+  "failed_password": "Wrong password",
+  "failed_register": "Sing up problem. Validation error. Make sure all the fields are provided. If so, try with others.",
+  "no_token": "No token provided"
+}

@@ -6,6 +6,10 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Anuncio = mongoose.model('Anuncio');
 
+var jwtAuth = require('../../lib/jwtAuth');
+
+router.use(jwtAuth());
+
 router.get('/', function(req, res, next) {
     var includeTotal = req.query.includeTotal || false;
     var limit = parseInt(req.query.limit) || null;
@@ -60,10 +64,8 @@ router.get('/', function(req, res, next) {
             return;
         }
         if( includeTotal){
-            console.log('IncludeTotal');
             res.json({success: true, total: anuncios.length, anuncios: anuncios});
         }else{
-            console.log('No IncludeTotal');
             res.json({success: true, anuncios: anuncios});
         }
     });
