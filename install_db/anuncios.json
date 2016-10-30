@@ -43,11 +43,39 @@
       "tags": ["comic", "humor", "el jueves"]
     },
     {
-      "nombre": "iPhone 6S",
+      "nombre": "Samsung Galaxy S6",
       "venta": true,
-      "precio": 645.15,
-      "foto": "iphone6s.jpg",
-      "tags": ["iphone", "movil", "apple"]
+      "precio": 450,
+      "foto": "s6.jpg",
+      "tags": ["iphone", "movil", "samsung"]
+    },
+    {
+      "nombre": "iPad Air 2",
+      "venta": true,
+      "precio": 480,
+      "foto": "ipadair.jpg",
+      "tags": ["ipad", "movil", "apple", "tablet"]
+    },
+    {
+      "nombre": "El Quijote",
+      "venta": false,
+      "precio": 10,
+      "foto": "quijote.jpg",
+      "tags": ["libro", "literatura"]
+    },
+    {
+      "nombre": "Mochila",
+      "venta": true,
+      "precio": 30,
+      "foto": "mochila.jpg",
+      "tags": ["viajes", "moda"]
+    },
+    {
+      "nombre": "Abrigo Piel",
+      "venta": true,
+      "precio": 150,
+      "foto": "abrigopiel.jpg",
+      "tags": ["moda", "ropa"]
     }
   ]
 }
