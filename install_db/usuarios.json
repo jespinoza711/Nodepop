@@ -1,13 +1,13 @@
 {
   "usuarios": [
     {
-      "nombre": "thinway",
-      "email": "fran@thinway.org",
+      "nombre": "sarah",
+      "email": "sarah@connor.com",
       "clave": "$2a$10$ZR.Y8MLnuklz57XJZKfw0uGI.7F3UyBl3yFizg2ut8VF2odPUTwxe"
     },
     {
-      "nombre": "smith",
-      "email": "smith@gmail.com",
+      "nombre": "john",
+      "email": "john@connor.com",
       "clave": "$2a$10$/WJnNJqWYRs7wn1mFSGlle2/wtDFuURYILvByFYHKfWik5joDJYT6"
     }
   ]

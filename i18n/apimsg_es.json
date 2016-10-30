@@ -2,5 +2,7 @@
   "failed_auth": "Token no autorizado",
   "failed_password": "Contraseña incorrecta",
   "failed_register": "Problema al registrarse. Error de validadación. Asegúrate de introducir todos los datos (nombre, email y clave). Si los has introducido, el usuario o el email ya se están utilizando, cámbialos por otros.",
-  "no_token": "No se ha facilitado token"
+  "no_token": "No se ha facilitado token",
+  "page_not_found": "Página no encontrada (Error 404)",
+  "error500": "Ha ocurrido un error (Error 500)"
 }

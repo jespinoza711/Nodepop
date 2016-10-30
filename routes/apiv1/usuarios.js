@@ -12,7 +12,7 @@ var jwt = require('jsonwebtoken');
 router.post('/authenticate', function (req,res,next) {
     var userEmail = req.body.email;
     var userPass = req.body.clave;
-    var lang = req.query.lang || req.query.lang || req.headers['lang'] || 'en';
+    var lang = req.query.lang || req.body.lang || req.headers['lang'] || 'en';
 
     if ( lang === 'es' ){
         var msgs = require('../../i18n/apimsg_es.json');
@@ -27,7 +27,7 @@ router.post('/authenticate', function (req,res,next) {
             res.json({success: false, message: 'muy chungo'});
             return;
         }
-
+        console.log("usuario:",usuario);
         // Se comprueba la contraseña
         if( usuario ){
             usuario.comparePassword(userPass, usuario.clave, function(err, isMatch) {
@@ -57,7 +57,7 @@ router.post('/authenticate', function (req,res,next) {
 
 router.post('/register', function (req, res, next) {
     var usuario = new Usuario(req.body);
-    var lang = req.query.lang || req.query.lang || req.headers['lang'] || 'en';
+    var lang = req.query.lang || req.body.lang || req.headers['lang'] || 'en';
 
     if ( lang === 'es' ){
         var msgs = require('../../i18n/apimsg_es.json');

@@ -2,5 +2,7 @@
   "failed_auth": "Failed to authenticate token",
   "failed_password": "Wrong password",
   "failed_register": "Sing up problem. Validation error. Make sure all the fields are provided. If so, try with others.",
-  "no_token": "No token provided"
+  "no_token": "No token provided",
+  "page_not_found": "Page not found (Error 404)",
+  "error500": "Error 500"
 }

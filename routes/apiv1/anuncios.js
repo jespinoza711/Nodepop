@@ -11,16 +11,15 @@ var jwtAuth = require('../../lib/jwtAuth');
 router.use(jwtAuth());
 
 router.get('/', function(req, res, next) {
-    var includeTotal = req.query.includeTotal || false;
-    var limit = parseInt(req.query.limit) || null;
-    var nombre = req.query.nombre;
-    var precio = req.query.precio;
-    var sort = req.query.sort || null;
-    var start = parseInt(req.query.start - 1) || 0;
-    var tag = req.query.tag;
-    var venta = req.query.venta;
+     var includeTotal = req.query.includeTotal || false;
+     var limit = parseInt(req.query.limit) || null;
+     var nombre = req.query.nombre;
+     var precio = req.query.precio;
+     var sort = req.query.sort || null;
+     var start = parseInt(req.query.start - 1) || 0;
+     var tag = req.query.tag;
+     var venta = req.query.venta;
 
-    console.log('Tags:',tag);
 
     var filter = {};
 
@@ -31,32 +30,37 @@ router.get('/', function(req, res, next) {
     if(typeof precio !== 'undefined') {
         var maxMin = precio.split("-");
 
-        console.log('maxMin: ', maxMin);
+        if( maxMin.length === 1 && maxMin[0] !== '' && !isNaN(maxMin[0]) ){
+            filter.precio = maxMin[0];
+        }else{
+            var min = maxMin[0];
+            var max = maxMin[1];
 
-        var min = maxMin[0];
-        var max = maxMin[1];
+            if( min === '' && !isNaN(max)) {
+                filter.precio = {$lt: max };
+            }else if( max === '' && !isNaN(min)) {
+                filter.precio = {$gt: min };
+            } else {
+                if( !isNaN(min) && !isNaN(max) ){
+                    filter.precio = {$gt: min, $lt: max};
+                }
 
-        if( min === '' ) {
-            filter.precio = {$lt: max };
-        }else if( max === '') {
-            filter.precio = {$gt: min };
-        } else {
-            filter.precio = {$gt: min, $lt: max};
+            }
         }
+
     }
 
     if(typeof tag !== 'undefined') {
-        filter.tags = { $in : tag };
+        if( tag.constructor === Array) {
+            filter.tags = { $in : tag };
+        }else{
+            filter.tags = { $in : [ tag ] };
+        }
     }
 
     if(typeof venta !== 'undefined'){
         filter.venta = venta;
     }
-
-    // filter = { precio: {$gt: 100, $lt: 500}};
-
-    console.log('filter: ', filter);
-// .find(filter).sort(sort).skip(start).limit(limit).exec
 
     Anuncio.list(filter, sort, start, limit,function (err, anuncios) {
         if(err){
