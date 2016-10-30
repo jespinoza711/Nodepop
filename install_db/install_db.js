@@ -1,5 +1,7 @@
 "use strict";
 
+var bcrypt = require('bcrypt');
+
 require('../lib/mongoConnection');
 require('../models/Anuncio');
 require('../models/Usuario');
