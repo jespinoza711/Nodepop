@@ -2,6 +2,22 @@
 
 Nodepop es un servicio para la publicación de anuncios de compra-venta y cambio de artículos de segunda mano a través de un API.
 
+## Demo (Práctica DevOps)
+
+Puedes ver una [demo del servicio](https://nodepop.thinway.org) donde puedes crear un usuario, autenticarte y consultar la lista de productos.
+
+Está desplegado en una instancia de AWS donde se han instalado los siguientes sitios:
+
+    > [Página Personal](https://thinway.org) (https://thinway.org) - Página HTML5 con una pequeña descripción.
+    > [Blog Personal](https://blog.thinway.org) (https://blog.thinway.org) - Blog montado con la herramienta Ghost. Servido por Node y los archivos estáticos con Nginx.
+    > [Nodepop](https://nodepop.thinway.org) (https://nodepop.thinway.org) - Demo del código de la herramienta de este repositorio
+    
+Tal como se pide en la práctica también se puede acceder a otra página a través de la IP de la instancia:
+
+    > [http://35.161.114.100](http://35.161.114.100) - Se mostrará información sobre todos los sitios almacenados en dicha instanacia.
+    
+Para el despliegue de las herramientas basadas en Node.js, Nodepop y el blog personal, se ha utilizado la herramienta [pm2](http://pm2.keymetrics.io/) la cual está configurada para levantar ambos serivicios automáticamente en caso de un reinicio por mantenimiento o caída del sistema.
+
 ## Instalación
 
 Para la instalación de este aplicación se requiere [Node.js](https://nodejs.org/en/) y [MongoDB](https://www.mongodb.com/es). Una vez clonado el respositorio se debe lanzar **MongoDB** en el puerto 27017 y crear una base de datos con nobre *nodepop*. Una vez el servidor está corriendo con la base de datos podemos lanzar el script de carga de datos de prueba. Para ello, dentro del directorio principal de la aplicación solo hay que ejecutar el siguiente comando:
